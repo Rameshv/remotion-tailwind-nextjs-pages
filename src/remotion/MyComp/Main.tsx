@@ -12,6 +12,7 @@ import React, { useMemo } from "react";
 import { Rings } from "./Rings";
 import { TextFade } from "./TextFade";
 import { CompositionProps } from "../../../types/constants";
+import '../../../styles/global.css'
 
 loadFont("normal", {
   subsets: ["latin"],
@@ -58,7 +59,7 @@ export const Main = ({ title }: z.infer<typeof CompositionProps>) => {
       </Sequence>
       <Sequence from={transitionStart + transitionDuration / 2}>
         <TextFade>
-          <h1 style={titleStyle}>{title}</h1>
+          <h1  className="text-3xl font-bold underline text-red-500">{title}</h1>
         </TextFade>
       </Sequence>
     </AbsoluteFill>
